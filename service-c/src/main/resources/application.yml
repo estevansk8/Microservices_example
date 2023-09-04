@@ -5,3 +5,13 @@ server:
 spring:
   application:
     name: @artifactId@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  server:
+    port: 9003
+  tracing:
+    sampling:
+      probability: 1.0
